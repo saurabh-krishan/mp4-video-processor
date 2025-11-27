@@ -1,10 +1,9 @@
-# m3u8-video-processor
+# mp4-video-processor
 
-A Flask-based web application that allows users to download, trim, and crop videos. The application specifically handles m3u8 video streams and can split videos into separate screen share and webcam components.
+A Flask-based web application that allows users to trim, and crop videos. The application specifically handles mp4 video and split it into separate screen share and webcam components.
 
 ## Features
 
-- Download videos from m3u8 streams
 - Trim videos with precise timestamp control
 - Crop videos into separate components (screen share and webcam areas)
 - Real-time progress tracking
@@ -47,8 +46,8 @@ ffprobe -version
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/kshnvagale/m3u8-video-processor.git
-cd m3u8-video-processor
+git clone https://github.com/saurabh-krishan/mp4-video-processor.git
+cd mp4-video-processor
 ```
 
 2. Create and activate a virtual environment:
@@ -92,10 +91,7 @@ http://localhost:5000 or http://127.0.0.1:5000
 
 ### Part 1: Downloading a Video
 
-1. Enter the m3u8 URL of the video you want to process
-2. Provide a filename for the downloaded video (must end with .mp4)
-3. Click "Download & Convert"
-4. Wait for the download and conversion process to complete
+1. Download the video and store it in the `Downloads/video_processor/uploads` folder
 
 ### Part 2: Processing the Video
 
@@ -115,7 +111,7 @@ http://localhost:5000 or http://127.0.0.1:5000
 ## File Structure
 
 ```
-m3u8-video-processor/
+mp4-video-processor/
 ├── static/
 │   ├── css/
 │   │   └── styles.css
@@ -149,11 +145,6 @@ m3u8-video-processor/
    - Check system resources (Activity Monitor)
    - Verify timestamps are valid
 
-4. **M3u8 download fails:**
-   - Verify the URL is accessible
-   - Check if the stream is still active
-   - Test your internet connection
-
 ## Support
 
-For support, please open an issue in the GitHub repository: https://github.com/kshnvagale/m3u8-video-processor/issues
+For support, please open an issue in the GitHub repository: https://github.com/saurabh-krishan/mp4-video-processor/issues

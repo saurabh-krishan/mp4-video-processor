@@ -475,7 +475,10 @@ def trim_video(input_file: str, screen_output: str, webcam_output: str,
             '-filter:v', ','.join(screen_filters),
             *bitrate_args,
             '-c:v', 'libx264',
-            '-an',  # No audio for screen share
+            '-preset', 'slow',           # Better compression (slower encode)
+            '-crf', '33',                # Quality factor
+            '-movflags', '+faststart',   # Streaming optimization
+            '-c:a', 'aac',               # Audio for webcam
             '-y',
             screen_output
         ]
@@ -526,7 +529,7 @@ def trim_video(input_file: str, screen_output: str, webcam_output: str,
             '-filter:v', ','.join(webcam_filters),
             *bitrate_args,
             '-c:v', 'libx264',
-            '-c:a', 'aac',
+            '-an',                  # No audio for webcam
             '-y',
             webcam_output
         ]
